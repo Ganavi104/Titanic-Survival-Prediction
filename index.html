@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Titanic Predictor</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:linear-gradient(135deg,#667eea,#764ba2);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.card{
+background:white;
+padding:30px;
+width:350px;
+border-radius:20px;
+}
+
+
+input,select,button{
+
+width:100%;
+padding:10px;
+margin:8px;
+
+}
+
+
+button{
+
+background:#667eea;
+color:white;
+border:none;
+border-radius:10px;
+
+}
+
+
+.result{
+
+margin-top:20px;
+font-size:22px;
+text-align:center;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="card">
+
+
+<h2>🚢 Titanic Prediction</h2>
+
+
+<form action="/predict" method="post">
+
+
+<input name="pclass" placeholder="Pclass">
+
+<input name="sex" placeholder="Sex 0/1">
+
+<input name="age" placeholder="Age">
+<input name="fare" placeholder="Fare">
+
+<input name="sibsp" placeholder="Sibling/spouse">
+
+<input name="parch" placeholder="Parch">
+
+<select name="embarked">
+
+<option value="0">C</option>
+<option value="1">Q</option>
+<option value="2">S</option>
+
+</select>
+
+
+<button>
+Predict
+</button>
+
+
+</form>
+
+
+<h3 class="result">
+
+{{prediction}}
+
+</h3>
+
+
+</div>
+
+
+</body>
+
+</html>
